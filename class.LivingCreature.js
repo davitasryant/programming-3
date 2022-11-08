@@ -3,6 +3,7 @@ class LivingCreature {
         this.x = x;
         this.y = y;
         this.multiplay = 0;
+        this.energy = 8;
         this.directions = [
             [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
@@ -26,5 +27,18 @@ class LivingCreature {
             }
         }
         return found;
+    }
+
+    getNewCoordinates() {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
     }
 }
